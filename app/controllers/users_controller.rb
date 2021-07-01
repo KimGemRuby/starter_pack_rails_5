@@ -31,7 +31,6 @@ class UsersController < ApplicationController
   end
   
   def destroy
-   if current_user = authenticate_user
     @user.destroy
       redirect_to root_path
    end
