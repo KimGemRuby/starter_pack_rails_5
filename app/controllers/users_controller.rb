@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   
   def index
     @users=User.all
@@ -30,8 +31,10 @@ class UsersController < ApplicationController
   end
   
   def destroy
+   if current_user = authenticate_user
     @user.destroy
       redirect_to root_path
+   end
   end
   
   #######
