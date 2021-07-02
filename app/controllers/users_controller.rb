@@ -15,7 +15,9 @@ class UsersController < ApplicationController
   end
   
   def edit
-    if @user == current_user
+    if current_user.admin? == true
+      render "edit"
+    elsif @user == current_user
       render "edit"
     else
       redirect_to root_path, notice: "Must be the User or Admin"
@@ -36,7 +38,10 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    if @user == current_user
+    if current_user.admin? == true
+      @user.destroy
+      redirect_to root_path, notice: "User destroy"
+    elsif @user == current_user
       @user.destroy
       redirect_to root_path, notice: "User destroy"
     else
