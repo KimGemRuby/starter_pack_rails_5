@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :is_user?, except: [:index, :show]
+  
   
   def index
     @users=User.all
@@ -15,13 +17,6 @@ class UsersController < ApplicationController
   end
   
   def edit
-    if current_user.admin? == true
-      render "edit"
-    elsif @user == current_user
-      render "edit"
-    else
-      redirect_to root_path, notice: "Must be the User or Admin"
-    end
   end
 
   def update 
@@ -38,15 +33,8 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    if current_user.admin? == true
       @user.destroy
       redirect_to root_path, notice: "User destroy"
-    elsif @user == current_user
-      @user.destroy
-      redirect_to root_path, notice: "User destroy"
-    else
-      redirect_to root_path, notice: "Must be the User or Admin"
-    end
   end
   
   #######
@@ -61,4 +49,12 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :description)
   end
   
+  def is_user?
+    @user=User.find(params[:id])
+    if @user != current_user
+      flash[:notice] = "Must be the User"
+      redirect_to root_path
+    end
+  end
+
 end

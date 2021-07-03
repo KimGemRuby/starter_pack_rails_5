@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="col-md-6">
-        <h2><strong><u>Users list :</u></strong></h2>
+        <h2><strong><u>Admin users list :</u></strong></h2>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -18,8 +18,8 @@
                         <td><%= link_to user.email, user_path(user) %></td>
                         <td><%= user.is_admin? %></td>
                         <td>
-                            <%= link_to "Edit", edit_user_path(user) %>
-                            <%= link_to "Delete", user_path(user), method: "DELETE", data: {confirm: 'Are you sure?'} %>
+                            <%= link_to "Edit", edit_admin_user_path(user) %>
+                            <%= link_to "Delete", admin_user_path(user), method: "DELETE", data: {confirm: 'Are you sure?'} %>
                         </td>
                     </tr>
                 <% end %>

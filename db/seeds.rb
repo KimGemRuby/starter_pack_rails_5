@@ -15,7 +15,7 @@ User.create(
     email:                  "tppk@love",
     password:               "tepepeka",
     password_confirmation:  "tepepeka",
-    admin:                  true
+    is_admin?:               true
 )
 puts "admin created"
 

@@ -17,11 +17,15 @@
                     <li class="nav-item">
                        <%= link_to "Contact us", "mailto:tepepeka@protonmail.com", class: "nav-link active" %>
                     </li>
+                    <li class="nav-item">
+                        <%= link_to 'dashboard admin', admin_users_path, class: "nav-link active" %>
+                    </li>
                 </ul>
 
                 <div class="align-self-center">
+
                     <% if user_signed_in? %>
-                        <%= link_to current_user.email %>
+                        <%= link_to current_user.email, user_path(current_user) %>
                         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
                     <% else %>
                         <%= link_to 'Login', new_user_session_path %>
