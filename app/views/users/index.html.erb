@@ -1,29 +1,31 @@
-<div class="container-fluid">
+<div class="container">
     <div class="col-md-6">
         <h2><strong><u>Users list :</u></strong></h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Is_admin?</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <% @users.sort{|a,b| b.created_at <=> a.created_at}.each do |user| %>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <th scope="row"><%= user.id %></th>
-                        <td><%= link_to user.email.truncate(8), user_path(user) %></td>
-                        <td><%= user.is_admin? %></td>
-                        <td>
-                            <%= link_to "Edit", edit_user_path(user) %>
-                            <%= link_to "Delete", user_path(user), method: "DELETE", data: {confirm: 'Are you sure?'} %>
-                        </td>
+                        <th scope="col">#</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Is_admin?</th>
+                        <th scope="col">Actions</th>
                     </tr>
-                <% end %>
-            </tbody>
-        </table>       
+                </thead>
+
+                <tbody>
+                    <% @users.sort{|a,b| b.created_at <=> a.created_at}.each do |user| %>
+                        <tr>
+                            <th scope="row"><%= user.id %></th>
+                            <td><%= link_to user.email, user_path(user) %></td>
+                            <td><%= user.is_admin? %></td>
+                            <td>
+                                <%= link_to "Edit", edit_user_path(user) %>
+                                <%= link_to "Delete", user_path(user), method: "DELETE", data: {confirm: 'Are you sure?'} %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>  
+        </div>
     </div>
 </div>
