@@ -60,19 +60,47 @@
     
     
     <h3><u>Omniauth Google OAuth2</u></h3>
+
     <p>Ajouter les gem omniauth, omniauth-google-oauth2, omniauth-rails_csrf_protection a votre Gemfile.</p>
+    <img><%= image_tag ("omni_1.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p>Lancer un bundle install.</p>
+    <img><%= image_tag ("tuto_3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p>Configuer les identifiants dans config/intializer/devise.rb</p>
+    <img><%= image_tag ("omni_2.png"), class:"img-fluid", alt:"Responsive image" %></img>
+    
     <p>Modifier les routes dans config/routes.rb</p>
+    <img><%= image_tag ("omni_3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+    
     <p>Modifier le model dans apps/models/user.rb</p>
-    <p>Créer un fichier callback dans app/controllers/users/omniauth_callbacks_controller.rb.</p>
+    <img><%= image_tag ("omni_4.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Créer un fichier callback dans omniauth_callbacks_controller.rb dans app/controllers/users.</p>
+    <img><%= image_tag ("omni_5.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p>Créer le controller de registration dans app/controllers/registrations_controller.rb</p>
+    <img><%= image_tag ("omni_6.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p>Ajouter la methode dans apps/models/user/rb.</p>
+    <img><%= image_tag ("omni_7.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p>Créer le lien pour se conencter.</p>
+    <img><%= image_tag ("omni_8.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p><%= link_to "Gem Ommiauth", "https://github.com/zquestz/omniauth-google-oauth2", target: "_blank", rel: "alternate" %></p>
 
     <h3><u>Créer une API sur google developer</u></h3>
-    <p>cree sa cle et la rentrer ds l appli</p>
+
+    <p>S inscrire sur le site de google dev, et creer une nouvelle appli</p>
+    <img><%= image_tag ("google_dev1.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Rentrer les uri de callback</p>
+    <img><%= image_tag ("google_dev2.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
+    <p>Mettre votre id et votre clé dans le fichier.env</p>
+    <img><%= image_tag ("google_dev3.png"), class:"img-fluid", alt:"Responsive image" %></img>
+
     <p><%= link_to "Ommiauth google video", "https://www.youtube.com/watch?v=9pD0uXLI5uE", target: "_blank", rel: "alternate" %></p>
     
     <h3><u>Sur cette application</u></h3>
