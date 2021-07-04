@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
   after_save :welcome_mail
 
-  def welcome_mail
-    UserMailer.welcome(self).deliver
+  def welcome_email
+    UserMailer.welcome_email(self).deliver_now
   end
 
   def self.from_omniauth(access_token)
