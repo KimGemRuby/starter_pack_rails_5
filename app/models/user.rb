@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  after_save :welcome_mail
+  after_save :welcome_email
 
   def welcome_email
     UserMailer.welcome_email(self).deliver_now
