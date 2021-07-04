@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def update 
+  def update
     if @user.update(user_params)
       redirect_to user_path(current_user), notice: "User update"
     else
