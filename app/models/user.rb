@@ -4,11 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
-  after_create :welcome_email
-
-  def welcome_mail
-    UserMailer.welcome(self).deliver
-  end
+ 
 
   def self.from_omniauth(access_token)
     data = access_token.info
