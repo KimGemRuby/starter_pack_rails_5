@@ -1,6 +1,7 @@
 # README
 
 Description : 
+
 Vous pouvez cloner cette application, elle dispose d'un mailer, de la possibilité d'avoir un compte admin et du branchement Bootstrap.
 
 Les liens et la gem turbolinks ont été retirés. La gem mini racer peut poser problème, n'hésitez pas à l'ajouter ou la mettre en commentaire dans votre Gemfile.
