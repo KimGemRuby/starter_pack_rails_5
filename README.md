@@ -1,5 +1,14 @@
 # README
-description
-heroku 
-admin 
-version 
+
+Description : 
+Vous pouvez cloner cette application, elle dispose d'un mailer, de la possibilité d'avoir un compte admin et du branchement Bootstrap.
+
+Les liens et la gem turbolinks ont été retirés. La gem mini racer peut poser problème, n'hésitez pas à l'ajouter ou la mettre en commentaire dans votre Gemfile.
+
+
+=> Il vous reste donc à régler vos adresses pour installer votre mailer, de générer vos propres clés API et de les enregistrer dans le fichier .env !
+
+
+Attention n'oubliez pas d'ajouter le .env dans votre fichier .gitignore :)
+
+Heroku : https://starter-pack-rails-5.herokuapp.com
