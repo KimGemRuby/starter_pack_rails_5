@@ -2,7 +2,7 @@
 
 Description : 
 
-Vous pouvez cloner cette application pour créer une application fonctionnelle en Rails 5, avec une base en Postgresql.
+Vous pouvez cloner ce repo pour créer une application fonctionnelle en Rails 5, avec une base en Postgresql.
 
 Elle dispose d'un mailer, de rspec pour tester vos models, de la possibilité d'avoir un compte admin, d'Omniauth (connexion avec Gmail) et d'un branchement Bootstrap.
 
