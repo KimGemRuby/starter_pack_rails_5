@@ -107,11 +107,16 @@
     
     <br>
     <h3><u>Sur cette application</u></h3>
-    <p>Vous pouvez cloner cette application sur Github, elle dispose aussi d'un mailer et de la possibilité d'avoir un compte admin.</p>
-    <p>Les liens et la gem turbolinks sont retirés, attention la gem mini racer qui est installée, elle peut poser problème.</p>
-    <p>Boostsrap est branché sur l'application.</p>
-    <p><strong>=> Il vous reste donc à régler vos adresses pour installer votre mailer, de générer vos propres clés API et de les enregistrer dans le fichier .env !</strong></p>
-    <p>Attention n'oubliez pas d'ajouter le .env dans votre fichier .gitignore :)</p>
+    <p>Vous pouvez cloner ce repo sur GitHub pour créer une application fonctionnelle en Rails 5, avec une base en Postgresql.</p>
+
+    <p>Elle dispose d'un mailer, de rspec pour tester vos models, de la possibilité d'avoir un compte admin, d'Omniauth (connexion avec Gmail) et d'un branchement Bootstrap.</p>
+    
+    <p>Les liens et la gem turbolinks ont été retirés. La gem mini racer peut poser problème, n'hésitez pas à l'ajouter ou la mettre en commentaire dans votre Gemfile.</p>
+    
+    <p><strong>=> Il ne vous reste plus qu'à régler vos adresses emails pour installer votre mailer, générer vos propres clés API et les enregistrer dans le fichier .env !</strong></p>
+    
+    <p>Attention n'oubliez pas d'ajouter le .env dans votre fichier .gitignore :) </p>
+
     <p>Pour installer votre mailer vous pouvez suivre ce tutoriel : <%= link_to "Mailer", "https://medium.com/@ericschwartz7/rails-mailer-tutorial-82700f6737d9", target: "_blank", rel: "alternate" %></p>
     <br>
     <p><%= link_to "Back", root_path %></p>
